@@ -95,7 +95,7 @@
       border-radius: 50%;
       object-fit: cover;
       display: block;
-      border: 2px solid white;
+      border: 3px solid white;
       transition: transform 0.2s ease;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
     }
@@ -111,7 +111,7 @@
       position: fixed;
       bottom: 10px;
       right: 10px;
-      z-index: 1000000;
+      z-index: 9990;
       max-width: 100%;
       max-height: 100%;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -122,7 +122,7 @@
     .chat-container.active {
       width: var(--chat-width) !important;
       height: var(--chat-height) !important;
-      z-index: 100000000;
+      z-index: 9990;
     }
     .close-button {
       display: none;
