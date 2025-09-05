@@ -87,6 +87,7 @@
       width: 90%;
       max-width: 130px;
       z-index: 1001;
+      cursor: pointer; /* Add cursor pointer to indicate clickability */
     }
     .chat-video {
       width: 150px;
@@ -338,14 +339,17 @@
       setTimeout(() => (errorMessage.style.display = 'none'), 5000);
     });
 
-  // Event listeners
-  video.addEventListener('click', () => {
+  // Event listeners for opening chat box
+  const openChatBox = () => {
     iframe.classList.add('active');
     closeButton.classList.add('active');
     container.classList.add('active');
     videoWrapper.classList.add('hidden');
     inputWrapper.classList.add('active');
-  });
+  };
+
+  video.addEventListener('click', openChatBox);
+  chatLabel.addEventListener('click', openChatBox); // Added click event for label
 
   closeButton.addEventListener('click', () => {
     iframe.classList.remove('active');
